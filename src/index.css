@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-indigo-500 selection:text-white transition-colors duration-300;
+  }
+}
+
+/* Custom Scrollbars for Lists and Code panels */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.5);
+}
+.dark ::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.3);
+  border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.5);
+}
+
+/* Custom 3D Animation Helper Classes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom Glow Effects */
+.glow-card-indigo {
+  box-shadow: 0 10px 30px -5px rgba(99, 102, 241, 0.05);
+}
+.dark .glow-card-indigo {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.12);
+}
+
+.glow-card-emerald {
+  box-shadow: 0 10px 30px -5px rgba(16, 185, 129, 0.05);
+}
+.dark .glow-card-emerald {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.12);
+}
+
+.glow-card-cyan {
+  box-shadow: 0 10px 30px -5px rgba(6, 182, 212, 0.05);
+}
+.dark .glow-card-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.12);
+}
+
+.glow-card-orange {
+  box-shadow: 0 10px 30px -5px rgba(249, 115, 22, 0.05);
+}
+.dark .glow-card-orange {
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.12);
+}
+
+/* Grid lines background mask */
+.grid-lines-bg {
+  background-image: linear-gradient(rgba(99, 102, 241, 0.025) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(99, 102, 241, 0.025) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+.dark .grid-lines-bg {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+}
